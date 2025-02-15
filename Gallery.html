@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-purple': '#0F0B1A',
+                        'light-purple': '#2D1B3D',
+                        'pink': '#FF1493',
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-poppins text-white min-h-screen">
+    <!-- Header -->
+     <section class="header-color">
+         <header class="container mx-auto px-4 py-6 flex justify-between">
+             <!-- Logo -->
+             <div>
+                 <img src="images/logo.png" alt="Global Glam Logo" class="w-auto h-10">
+             </div>
+     
+             <!-- Desktop Navigation -->
+             <nav class="hidden md:flex space-x-8">
+                 <a href="./index.html" class="hover:text-pink">Home</a>
+                 <a href="./AboutUs.html" class="hover:text-pink">About Us</a>
+                 <a href="./Products.html" class="hover:text-pink">Products</a>
+                 <a href="./Gallery.html" class="text-pink border-b-2 border-pink pb-1">Gallery</a>
+                 <a href="./Blog.html" class="hover:text-pink">Blog</a>
+                 <a href="./Forum.html" class="hover:text-pink">Forum</a>
+             </nav>
+     
+             <!-- Contact Button -->
+             <a href="./ContactUs.html"
+                 class="hidden md:flex relative bg-pink-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-pink-700 flex items-center gap-2"
+                 style="background: url('images/Contact-Border.png') no-repeat center; background-size: contain;">
+                 <span class="z-10">Contact Now >></span>
+             </a>
+     
+             <!-- Mobile Menu Toggle -->
+             <button id="menuToggle" class="md:hidden flex absolute right-10 top-8 text-pink">
+                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                     stroke="currentColor">
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                 </svg>
+             </button>
+         </header>
+     </section>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu"
+        class="hidden fixed top-0 left-0 w-full h-full bg-gradient-to-b from-indigo-950 to-purple-900 text-white z-50">
+        <div class="relative w-full">
+            <!-- Logo and Close Button Row -->
+            <div class="px-4 py-4 border-b border-gray-700">
+                <!-- Logo -->
+                <img src="images/logo.png" alt="Global Glam Logo" class="h-10 w-auto">
+
+                <!-- Close Button -->
+                <button id="menuClose" class="text-pink hover:text-pink-600 absolute right-10 top-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Header Underline -->
+            <div class="w-full">
+                <img src="images/Header line.png" alt="Header Underline" class="w-full">
+            </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="container mx-auto px-4 py-6">
+            <nav class="mt-10 space-y-6 text-center">
+                <a href="./index.html" class="block text-pink font-semibold text-lg hover:underline">Home</a>
+                <a href="./AboutUs.html"
+                    class="block text-white font-medium text-lg hover:text-pink hover:underline">About
+                    Us</a>
+                <a href="./Products.html"
+                    class="block text-white font-medium text-lg hover:text-pink hover:underline">Products</a>
+                <a href="./Gallery.html"
+                    class="block text-white font-medium text-lg hover:text-pink hover:underline">Gallery</a>
+                <a href="./Blog.html"
+                    class="block text-white font-medium text-lg hover:text-pink hover:underline">Blog</a>
+                <a href="./Forum.html"
+                    class="block text-white font-medium text-lg hover:text-pink hover:underline">Forum</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Full-Width Header Line -->
+    <div class="w-full">
+        <hr style="border: none; border-top: 2px solid #130c24;" />
+    </div>
+
+    <!-- Banner Section -->
+    <section class="relative w-full h-[400px] md:h-[600px] flex flex-col items-center justify-center bg-cover bg-center"
+        style="background: linear-gradient(16.25deg, rgba(194, 37, 138, 0.4) -5%, rgba(10, 2, 28, 0.2) 40%), #0a021c;">
+        <!-- Background Overlay -->
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+        <!-- Breadcrumb Navigation -->
+        <div class="relative z-10 flex items-center justify-center gap-3 sm:gap-6">
+            <!-- Left Vector -->
+            <img src="images/Left-Vector.png" alt="Left Vector" class="hidden md:flex w-12 sm:w-16 lg:w-auto h-auto">
+
+            <!-- Breadcrumb Text -->
+            <nav class="flex text-lg sm:text-xl font-semibold text-white flex items-center gap-2">
+                <div>
+                    <img src="images/Left-Vector.png" alt="Left Vector"
+                        class="absolute md:hidden left-[-40%] top-[-240%] w-28 lg:w-auto h-auto ">
+                    <a href="./index.html" class="hover:underline md:text-gray-300 text-md md:text-xl ">Home</a>
+                    <span class="text-sm md:text-xl md:text-gray-400 mx-2">/</span>
+                    <span class="text-pink text-md md:text-xl">Gallery</span>
+                    <img src="images/Right-Vector.png" alt="Right Vector"
+                        class="absolute md:hidden right-[-40%] top-[-240%] w-28 lg:w-auto h-auto">
+                </div>
+            </nav>
+
+            <!-- Right Vector -->
+            <img src="images/Right-Vector.png" alt="Right Vector" class="hidden md:flex w-12 lg:w-auto h-auto">
+        </div>
+    </section>
+
+    <!-- Main Container -->
+    <div class="flex flex-col items-center py-8 sm:py-16 about-color" >
+        <div class="w-full max-w-full sm:max-w-4xl rounded-md">
+            <a href="./GalleryVideo.html">
+                <img src="images/Gallery section.png" alt="Gallery Section"
+                    class="w-full h-auto object-cover rounded-md">
+            </a>
+        </div>
+    </div>
+
+
+
+    <!-- <section class="w-full max-w-6xl mx-auto py-12 px-4">
+        <div class="flex justify-center space-x-4 mb-8">
+            <button
+                class="px-6 py-2 text-white text-lg font-semibold bg-indigo-700 rounded-md shadow hover:bg-indigo-600 focus:outline-none">
+                Gallery
+            </button>
+            <button
+                class="px-6 py-2 text-white text-lg font-semibold bg-gray-800 rounded-md shadow hover:bg-gray-700 focus:outline-none">
+                Video
+            </button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="relative overflow-hidden">
+                <img src="images/Gallery1.png" alt="Image 1"
+                    class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
+            </div>
+
+            <div class="relative overflow-hidden rounded-lg ">
+                <img src="images/Gallery2.png" alt="Image 2"
+                    class="w-full h-auto object-cover transition-transform duration-300 hover:scale-105">
+            </div>
+
+            <div class="relative overflow-hidden rounded-lg border border-gray-800 bg-gray-900/50 aspect-[4/3]">
+                <img src="images/Gallery3.png" alt="Image 3"
+                    class="w-full h-full  transition-transform duration-300 hover:scale-105">
+            </div>
+
+            <div class="relative overflow-hidden rounded-lg border border-gray-800 bg-gray-900/50 aspect-[3/4]">
+                <img src="images/Gallery4.png" alt="Image 4"
+                    class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
+            </div>
+
+            <div class="relative overflow-hidden rounded-lg border border-gray-800 bg-gray-900/50 aspect-square">
+                <img src="images/Gallery5.png" alt="Image 5"
+                    class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
+            </div>
+
+            <div class="relative overflow-hidden rounded-lg border border-gray-800 bg-gray-900/50 aspect-[3/4]">
+                <img src="images/Gallery6.png" alt="Image 6"
+                    class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
+            </div>
+
+            <div class="relative overflow-hidden rounded-lg border border-gray-800 bg-gray-900/50 aspect-square">
+                <img src="images/Gallery7.png" alt="Image 7"
+                    class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
+            </div>
+
+            <div class="relative overflow-hidden rounded-lg border border-gray-800 bg-gray-900/50 aspect-[3/4]">
+                <img src="images/Gallery8.png" alt="Image 8"
+                    class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
+            </div>
+
+            <div class="relative overflow-hidden rounded-lg border border-gray-800 bg-gray-900/50 aspect-square">
+                <img src="images/Gallery9.png" alt="Image 9"
+                    class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
+            </div>
+        </div>
+
+
+
+
+    </section> -->
+
+
+
+
+    <!-- Footer Section -->
+    <footer class="footer-color text-white">
+        <div class="container mx-auto px-6 py-12">
+          <!-- Footer Main Content -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <!-- Company Info -->
+            <div class="space-y-6">
+              <img src="images/logo.png" alt="Global Glam Logo" class="h-12">
+              <p class="text-gray-300 max-w-md">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac consequat risus, a interdum
+                nunc. Mauris eu nisi non diam tincidunt mollis. Morbi lobortis lacinia dui at gravida.
+              </p>
+              <!-- Social Links -->
+              <span class="flex items-center">
+                <!-- Facebook Icon -->
+                <a href="#" class="text-gray-300 mx-2 hover:text-pink-500 transition-colors">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
+                  </svg>
+                </a>
+                <!-- LinkedIn Icon -->
+                <a href="#" class="text-gray-300 mx-2 hover:text-blue-500 transition-colors">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19 0H5C2.243 0 0 2.243 0 5v14c0 2.757 2.243 5 5 5h14c2.757 0 5-2.243 5-5V5c0-2.757-2.243-5-5-5zM8.354 18.354H5.644V9.837h2.71v8.517zm-1.355-9.42a1.571 1.571 0 1 1 0-3.142 1.571 1.571 0 0 1 0 3.142zm11.518 9.42h-2.709v-4.065c0-.97-.348-1.632-1.22-1.632-.665 0-1.062.445-1.238.874-.063.154-.079.369-.079.585v4.238H10.71s.036-6.874 0-7.517h2.709v1.064c.36-.555 1.003-1.347 2.444-1.347 1.784 0 3.124 1.162 3.124 3.655v4.145z" />
+                  </svg>
+                </a>
+                <!-- Instagram Icon -->
+                <a href="#" class="text-gray-300 mx-2 hover:text-pink-600 transition-colors">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M7.75 2C4.693 2 2.25 4.444 2.25 7.5v9C2.25 19.556 4.693 22 7.75 22h9c3.057 0 5.5-2.444 5.5-5.5v-9C22.25 4.444 19.807 2 16.75 2h-9zM16.75 4.5a1 1 0 0 1 1 1v.583a1 1 0 0 1-1 1h-.625a1 1 0 0 1-1-1V5.5a1 1 0 0 1 1-1h.625zM12 7.5a4.5 4.5 0 1 1-4.5 4.5A4.5 4.5 0 0 1 12 7.5zM12 9a3 3 0 1 0 3 3 3 3 0 0 0-3-3z" />
+                  </svg>
+                </a>
+                <!-- YouTube Icon -->
+                <a href="#" class="text-gray-300 mx-2 hover:text-red-600 transition-colors">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M23.498 6.186a3 3 0 0 0-2.11-2.11C19.925 3.45 12 3.45 12 3.45s-7.926 0-9.388.627a3 3 0 0 0-2.11 2.11C0.875 7.65 0.875 12 0.875 12s0 4.35.627 5.812a3 3 0 0 0 2.11 2.11c1.462.627 9.388.627 9.388.627s7.925 0 9.388-.627a3 3 0 0 0 2.11-2.11C23.875 16.35 23.875 12 23.875 12s0-4.35-.377-5.814zM9.59 15.833V8.167L15.5 12z" />
+                  </svg>
+                </a>
+                <!-- WhatsApp Icon -->
+                <a href="#" class="text-gray-300 mx-2 hover:text-green-500 transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="w-6 h-6" fill="currentColor">
+                    <path d="M16.02 0C7.178 0 .033 7.145.033 15.967c0 3.02.806 5.948 2.34 8.524L.27 30.282a1.197 1.197 0 0 0 1.448 1.448l5.788-2.083a15.844 15.844 0 0 0 8.512 2.318c8.842 0 16.027-7.157 16.027-15.983C32.048 7.145 24.863 0 16.02 0zm0 28.657a13.31 13.31 0 0 1-7.18-2.1l-.514-.323-3.644 1.311.996-3.78-.335-.536a13.332 13.332 0 0 1-2.06-7.26c.002-7.36 5.99-13.342 13.354-13.342 7.358 0 13.344 5.984 13.344 13.342 0 7.358-5.986 13.345-13.344 13.345zm7.225-9.755c-.394-.197-2.336-1.156-2.697-1.289-.36-.134-.621-.197-.883.197-.264.394-1.014 1.287-1.242 1.55-.228.263-.455.296-.848.099-.394-.197-1.662-.614-3.164-1.959-1.17-1.044-1.961-2.337-2.19-2.731-.228-.395-.025-.61.172-.806.182-.182.394-.48.591-.735.2-.256.266-.434.4-.69.133-.263.067-.493-.033-.69-.1-.197-.883-2.136-1.211-2.921-.318-.77-.643-.667-.883-.678-.228-.01-.487-.012-.748-.012-.263 0-.69.098-1.05.493-.36.394-1.378 1.346-1.378 3.282 0 1.937 1.407 3.808 1.602 4.073.197.263 2.768 4.23 6.692 5.927 3.923 1.696 3.923 1.131 4.63 1.066.711-.065 2.338-1.032 2.671-2.03.333-.998.333-1.852.233-2.03-.1-.176-.36-.286-.754-.483z" />
+                  </svg>
+                </a>
+              </span>
+              
+              
+            </div>
+            <!-- Quick Links -->
+            <div>
+              <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+              <ul class="space-y-2">
+                <li><a href="#" class="text-gray-300 hover:text-pink-500">Home</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-pink-500">About Us</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-pink-500">Services</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-pink-500">Contact</a></li>
+              </ul>
+            </div>
+            <!-- Contact Info -->
+            <div>
+              <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+              
+              <!-- Location -->
+              <div class="flex items-center mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-300 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2c3.866 0 7 3.134 7 7 0 5.25-7 13-7 13S5 14.25 5 9c0-3.866 3.134-7 7-7z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11a2 2 0 100-4 2 2 0 000 4z" />
+                </svg>
+                <p class="text-gray-300">123 Glam Street, NY, USA</p>
+              </div>
+              
+              <!-- Phone -->
+              <div class="flex items-center mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-300 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h2.28c.4 0 .78.16 1.06.44L9.586 5.94a2 2 0 01.414 1.18v2.24c0 .53-.21 1.04-.586 1.414l-1.585 1.586a11.956 11.956 0 005.122 5.122l1.585-1.586c.374-.375.884-.586 1.414-.586h2.24c.44 0 .87.15 1.18.414l2.5 2.5c.28.28.44.66.44 1.06V19a2 2 0 01-2 2h-1c-9.941 0-18-8.059-18-18v-1z" />
+                </svg>
+                <p class="text-gray-300">Phone: (123) 456-7890</p>
+              </div>
+              
+              <!-- Email -->
+              <div class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-300 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 4H8c-2.21 0-4 1.79-4 4v8c0 2.21 1.79 4 4 4h8c2.21 0 4-1.79 4-4V8c0-2.21-1.79-4-4-4z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 6l-10 7L2 6" />
+                </svg>
+                <p class="text-gray-300">Email: info@globalglam.com</p>
+              </div>
+            </div>
+            
+          </div>
+          <!-- Footer Bottom -->
+          <div class="border-t border-gray-700 pt-6 text-center">
+            <p class="text-gray-400 text-sm">
+              &copy; 2024 Global Glam. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+
+    <!-- Scripts for Mobile Menu -->
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuClose = document.getElementById('menuClose');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+
+        menuClose.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    </script>
+
+</body>
+
+</html>

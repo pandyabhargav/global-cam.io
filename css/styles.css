@@ -1,0 +1,228 @@
+.factory-image-container {
+  width: 352px;
+  height: 528px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 222px 222px 222px 222px;
+}
+
+.factory-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.text-overlay h1 {
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.text-overlay h1 span {
+  letter-spacing: 2px;
+}
+
+/* General Layout */
+.relative {
+  position: relative;
+}
+
+.box {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.icon-button {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.icon-button img {
+  width: 50%;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.description {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top: 4px;
+  color: #333;
+  max-width: 80%;
+}
+
+.container-md {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .flex {
+    /* flex-direction: column !important; */
+  }
+  .box {
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
+}
+
+.maincontai-color {
+  background: rgb(105,20,84);
+background: linear-gradient(5deg, rgba(105,20,84,1) 0%, rgba(9,2,27,1) 53%);
+}
+.header-color {
+  background-color: #09021b;
+}
+.about-color {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    94deg,
+    rgba(2, 0, 36, 1) 60%,
+    rgba(53, 9, 88, 0.9836309523809523) 100%
+  );
+}
+.footer-color {
+  background: rgb(10, 3, 28);
+  background: -moz-linear-gradient(
+    73deg,
+    rgba(10, 3, 28, 1) 60%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    73deg,
+    rgba(10, 3, 28, 1) 60%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  background: linear-gradient(
+    73deg,
+    rgba(10, 3, 28, 1) 60%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0a031c",endColorstr="#000000",GradientType=1);
+}
+.Rechout-col {
+  background: rgb(30, 5, 44);
+  background: linear-gradient(
+    73deg,
+    rgba(30, 5, 44, 1) 21%,
+    rgba(11, 2, 35, 1) 61%
+  );
+}
+.terminal {
+  background: rgb(38, 22, 55);
+  background: -moz-linear-gradient(
+    73deg,
+    rgba(38, 22, 55, 1) 21%,
+    rgba(14, 7, 31, 1) 61%
+  );
+  background: -webkit-linear-gradient(
+    73deg,
+    rgba(38, 22, 55, 1) 21%,
+    rgba(14, 7, 31, 1) 61%
+  );
+  background: linear-gradient(
+    73deg,
+    rgba(38, 22, 55, 1) 21%,
+    rgba(14, 7, 31, 1) 61%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#261637",endColorstr="#0e071f",GradientType=1);
+}
+.our-trust--card-color {
+  background: rgb(28,16,45);
+  background: -moz-linear-gradient(121deg, rgba(28,16,45,0.9780287114845938) 0%, rgba(11,4,29,1) 100%);
+  background: -webkit-linear-gradient(121deg, rgba(28,16,45,0.9780287114845938) 0%, rgba(11,4,29,1) 100%);
+  background: linear-gradient(121deg, rgba(28,16,45,0.9780287114845938) 0%, rgba(11,4,29,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1c102d",endColorstr="#0b041d",GradientType=1);
+}
+
+.swiper-container {
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  flex: 1 0 100%; /* Ensures each slide takes full width */
+  box-sizing: border-box;
+}
+.swiper-container {
+  height: 100px; /* Adjust as needed */
+}
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+.swiper-container-2 {
+  width: 100%;
+  padding: 20px 0; /* Add some padding if needed */
+}
+
+.swiper-slide {
+  width: 100%; /* Ensure the slides fill the width of the container */
+}
+
+/* .grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+} */
+
+
+.swiper-container-3 {
+  width: 100%; /* Full width */
+  height: auto; /* Adjust height as needed */
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Optionally, set a specific height for the slide */
+  height: 100%;
+}
